@@ -7,6 +7,7 @@
   --clr-dark: 230 35% 7%;
   --clr-white: 0 0% 100%;
   --clr-red: 357 85% 51%;
+  --clr-dark-red: 357, 85%, 30%;
   --clr-grey: 209 7% 20%;
   --clr-light-grey: 206 10% 69%;
 
@@ -39,7 +40,7 @@
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
-    --fs-500: 1.75rem;
+    --fs-500: 1.65rem;
     --fs-400: 1.125rem;
   }
 }
@@ -125,7 +126,6 @@ select {
 
 .flex {
   display: flex;
-  gap: var(--gap, 1rem);
 }
 
 .flex.even-columns > * {
@@ -272,14 +272,16 @@ select {
 /* ------------------- */
 
 .logo {
-  height: clamp(3.5rem, 6vw, 6rem);
+  height: clamp(3rem, 6vw, 6rem);
   cursor: pointer;
 }
 
 .primary-header {
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  padding: 0.7rem;
+  background: hsl(var(--clr-dark));
+  margin-bottom: 50vh;
 }
 
 .primary-navigation {
@@ -287,6 +289,7 @@ select {
   list-style: none;
   padding: 0;
   margin: 0;
+  gap: 1rem;
 }
 
 .primary-navigation a {
@@ -321,54 +324,148 @@ select {
 }
 
 .image-section {
+  position: fixed;
   background-color: hsl(var(--clr-red));
-  background-image: url(./pictures/bg-picture-dark.jpg);
+  background-image: url(./pictures/banner-bg-mobile.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-blend-mode: multiply;
-  height: 25vh;
+  filter: brightness(0.5);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #main h2 {
   color: hsl(var(--clr-dark));
   text-align: center;
   margin: 3rem 0;
+  font-weight: 900;
 }
 
 #main {
   background-color: hsl(var(--clr-white));
 }
 
-.card-container {
-  justify-content: space-around;
-  padding: 0 5rem;
-  gap: 3rem;
-}
-
 .card {
-  background: hsl(var(--clr-grey));
-  padding: 3rem 2rem;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-between;
+  background: hsl(var(--clr-white) / 0.8);
   border-radius: 15px;
-}
-
-.car-offers > .card {
-  width: 25vw;
-  /* margin: 3rem 0; */
-}
-
-.bike-offers > .card {
-  width: 25vw;
+  overflow: hidden;
+  width: 80vw;
+  box-shadow: -1px 15px 30px -12px black;
   margin-bottom: 3rem;
 }
 
-.primary-footer {
-  padding: 2rem 5rem;
-  justify-content: space-between;
+.card h3 {
+  background: hsl(var(--clr-grey) / 0.8);
+  text-align: center;
+  font-weight: 900;
+  padding: 1rem 0;
+  background: linear-gradient(
+    to right,
+    hsl(var(--clr-red)),
+    hsl(var(--clr-dark-red))
+  );
 }
+
+.card-description {
+  padding: 0.5rem;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark) / 0.7);
+}
+
+.card .offer_info {
+  background: hsl(var(--clr-red));
+  align-items: stretch;
+  padding: 0.3rem;
+}
+
+.offer-prices {
+  justify-content: space-around;
+}
+
+.service-time,
+.service-cost {
+  font-size: 1.3rem;
+  font-weight: 400;
+  flex: 1;
+  text-align: center;
+}
+
+.service-time {
+  border-right: 1px solid hsl(var(--clr-dark-red));
+}
+
+.service-time::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f017";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.car-icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f5e4";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 0.3rem;
+}
+
+.service-cost::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f155";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.truck-icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f63c";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 0.3rem;
+}
+
+hr.rounded {
+  border-top: 3px solid hsl(var(--clr-light-grey));
+  border-radius: 5px;
+  width: 90vw;
+}
+
+.primary-footer {
+  background: hsl(var(--clr-dark));
+  padding: 1.5rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .primary-footer small {
   float: left;
   font-weight: 400;
+}
+
+.social-icons {
+  font-size: var(--fs-500);
 }
 
 .primary-footer a {
@@ -378,6 +475,10 @@ select {
 
 .primary-footer li {
   list-style: none;
+}
+
+.primary-footer nav {
+  gap: 1rem;
 }
 
 .ubicacion {
@@ -393,4 +494,56 @@ select {
 
 .info-ubicacion {
   flex-direction: column;
+}
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+
+.grid-container,
+.card-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 45em) {
+  .card {
+    display: flex;
+    width: 20vw;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: 250ms;
+  }
+
+  .card:hover {
+    transform: scale(120%);
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 0 5rem;
+    gap: 3rem;
+  }
+
+  .image-section {
+    position: fixed;
+    background-color: hsl(var(--clr-red));
+    background-image: url(./pictures/banner-bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    filter: brightness(0.5);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 }

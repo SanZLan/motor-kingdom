@@ -14,6 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="./index.css" />
   </head>
@@ -52,26 +59,36 @@
       </nav>
     </header>
     <div class="image-section"></div>
-    <main id="main">
+    <main id="main" class="grid-container">
       <h2 class="uppercase">
         Servicios de lavado para automóviles, camperos y camionetas
       </h2>
-      <div class="card-container car-offers flex">
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Básico</h3>
+      <div class="card-container car-offers">
+        <div class="card flex">
+          <h3 class="card-title uppercase">Básico</h3>
+          <div class="card-description">
             <ul>
               <li>Lavado shampoo PH neutro</li>
               <li>Aspirado</li>
               <li>Limpieza interior</li>
               <li>Gel hidratante e hidrofóbico para las llantas</li>
             </ul>
-            <p class="fs-200">*Tiempo aproximado de trabajo 40 Minutos</p>
+          </div>
+          <div class="offer_info flex">
+            <div class="service-time fs-200">
+              <p>40m</p>
+            </div>
+            <div class="service-cost fs-200">
+              <p class="offer-prices flex">
+                <span class="car-icon">20k</span>
+                <span class="truck-icon">30k</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Medio</h3>
+        <div class="card flex">
+          <h3 class="card-title uppercase">Medio</h3>
+          <div class="card-description">
             <ul>
               <li>Lavado shampoo PH neutro</li>
               <li>Lavado Shampoo limpieza profunda</li>
@@ -79,14 +96,22 @@
               <li>Limpieza interior</li>
               <li>Gel hidratante e hidrofóbico para las llantas</li>
             </ul>
-            <p class="fs-200">
-              *Tiempo aproximado de trabajo 1 Hora 10 Minutos
-            </p>
+          </div>
+          <div class="offer_info flex">
+            <div class="service-time fs-200">
+              <p>1h 10m</p>
+            </div>
+            <div class="service-cost fs-200">
+              <p class="offer-prices flex">
+                <span class="car-icon">25k</span>
+                <span class="truck-icon">35k</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Superior</h3>
+        <div class="card flex">
+          <h3 class="card-title uppercase">Superior</h3>
+          <div class="card-description">
             <ul>
               <li>Lavado shampoo PH neutro</li>
               <li>Lavado con shampoo que encera y crea una capa hidrofóbica</li>
@@ -94,46 +119,79 @@
               <li>Limpieza interior</li>
               <li>Gel hidratante e hidrofóbico para las llantas</li>
             </ul>
-            <p class="fs-200">
-              *Tiempo aproximado de trabajo 1 Hora 30 Minutos
-            </p>
+          </div>
+          <div class="offer_info flex">
+            <div class="service-time fs-200">
+              <p>1h 30m</p>
+            </div>
+            <div class="service-cost fs-200">
+              <p class="offer-prices flex">
+                <span class="car-icon">30k</span>
+                <span class="truck-icon">45k</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      <hr class="rounded" />
       <h2 class="uppercase">Servicio de lavado para MOTOS</h2>
       <div class="card-container bike-offers flex">
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Básico</h3>
+        <div class="card flex">
+          <h3 class="card-title uppercase">Básico</h3>
+          <div class="card-description">
             <ul>
               <li>Lavado shampoo PH neutro</li>
               <li>Desengrasado</li>
               <li>Soplado para secar</li>
               <li>Gel hidratante e hidrofóbico para las llantas</li>
             </ul>
-            <p class="fs-200">*Tiempo aproximado de trabajo 40 Minutos</p>
+          </div>
+          <div class="offer_info flex">
+            <div class="service-time fs-200">
+              <p>1h 30m</p>
+            </div>
+            <div class="service-cost fs-200">
+              <p class="offer-prices flex">
+                <span class="car-icon">30k</span>
+                <span class="truck-icon">45k</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="card-title">Superior</h3>
+        <div class="card flex">
+          <h3 class="card-title uppercase">Superior</h3>
+          <div class="card-description">
             <ul>
               <li>Lavado shampoo PH neutro</li>
-              <li>Lavado Shampoo limpieza profunda</li>
+              <li>Lavado shampoo limpieza profunda</li>
               <li>Desengrasado general</li>
               <li>Soplado para secar</li>
+              <li>Gel hidratante e hidrofóbico para llantas</li>
               <li>Restauración de partes negras</li>
               <li>Lavado y limpieza del kit de arrastre</li>
             </ul>
-            <p class="fs-200">
-              *Tiempo aproximado de trabajo 1 Hora 10 Minutos
-            </p>
+          </div>
+          <div class="offer_info flex">
+            <div class="service-time fs-200">
+              <p>1h 30m</p>
+            </div>
+            <div class="service-cost fs-200">
+              <p class="offer-prices flex">
+                <span class="car-icon">30k</span>
+                <span class="truck-icon">45k</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </main>
     <footer class="primary-footer flex">
       <small>&copy; Motor Kingdom</small>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/motorkingdomchia/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
       <nav class="nav flex">
         <li><a href="index.html">Home</a></li>
         <li><a href="location.html">Ubicación</a></li>
