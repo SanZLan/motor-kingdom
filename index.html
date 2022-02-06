@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body>
+  <body id="home">
     <header class="primary-header fs-500 flex">
       <div>
         <a href="index.html">
@@ -37,7 +37,7 @@
       </div>
       <nav class="nav">
         <ul
-          id="primary-navgation"
+          id="primary-navigation"
           data-visible="false"
           class="primary-navigation underline-indicators flex"
         >
@@ -184,7 +184,29 @@
           </div>
         </div>
       </div>
+      <div class="media-scroller snaps-inline">
+        <div class="media-element">
+          <img src="./pictures/carr1.jpg" alt="Scroller photo 1" />
+        </div>
+        <div class="media-element">
+          <img src="./pictures/carr2.jpg" alt="Scroller photo 2" />
+        </div>
+        <div class="media-element">
+          <img src="./pictures/carr3.jpg" alt="Scroller photo 3" />
+        </div>
+        <div class="media-element">
+          <img src="./pictures/carr4.jpg" alt="Scroller photo 4" />
+        </div>
+        <div class="media-element">
+          <img src="./pictures/carr5.jpg" alt="Scroller photo 5" />
+        </div>
+      </div>
     </main>
+    <div class="chat-link">
+      <a href="https://api.whatsapp.com/send?phone=573142819270">
+        <img src="./logos/whatsapp-logo.png" alt="WhatsApp link" />
+      </a>
+    </div>
     <footer class="primary-footer flex">
       <small>&copy; Motor Kingdom</small>
       <div class="social-icons">
@@ -193,7 +215,7 @@
         ></a>
       </div>
       <nav class="nav flex">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="location.html">Ubicación</a></li>
       </nav>
     </footer>
