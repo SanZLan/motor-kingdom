@@ -286,6 +286,8 @@ select {
   padding: 0.7rem 1rem;
   background: hsl(var(--clr-dark));
   margin-bottom: 50vh;
+  position: fixed;
+  width: 100%;
 }
 
 .primary-navigation {
@@ -345,14 +347,18 @@ select {
 }
 
 .image-section {
-  position: fixed;
-  background-image: url(./pictures/banner-bg-mobile.jpg);
+  position: relative;
+  background-attachment: fixed;
+  background-image: url(./pictures/banner-bg-mobile-no-text.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 50vh;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-scroller {
@@ -368,6 +374,7 @@ select {
 
 .snaps-inline {
   scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
 }
 
 .snaps-inline > * {
@@ -405,7 +412,7 @@ select {
   border-radius: 15px;
   overflow: hidden;
   width: 80vw;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px hsl(var(--clr-dark));
   margin-bottom: 3rem;
 }
 
@@ -508,6 +515,7 @@ hr.rounded {
   bottom: 4rem;
   right: 1rem;
   transition: 250ms ease-in-out;
+  filter: drop-shadow(5px 5px 5px hsl(var(--clr-dark)));
 }
 
 .chat-link:hover {
@@ -608,19 +616,17 @@ iframe {
   }
 
   .image-section {
-    position: fixed;
-    background-image: url(./pictures/banner-bg-desktop.jpg);
+    position: relative;
+    background-image: url(./pictures/banner-bg-desktop-no-text.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 70vh;
     z-index: -1;
-  }
-
-  .text-image {
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .media-scroller {
@@ -629,8 +635,9 @@ iframe {
 
   .chat-link {
     width: 80px;
-    bottom: 5rem;
-    right: 2rem;
+    bottom: 7rem;
+    right: 5rem;
+    filter: drop-shadow(5px 5px 5px hsl(var(--clr-dark)));
   }
 
   .chat-link:hover {
